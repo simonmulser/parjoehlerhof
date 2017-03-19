@@ -1,6 +1,9 @@
 {
   "name": "parjoehlerhof",
   "version": "0.0.1",
+  "description": "description",
+  "license": "CC-BY-4.0",
+  "repository": "repository",
   "devDependencies": {
     "gulp": "^3.9.1"
   }
