@@ -9,7 +9,7 @@ var paths = {
 
 gulp.task('fileinclude', function() {
     return gulp.src(path.join(paths.templates, '*.tpl.html'))
-        .pipe(fileinclude())
+        .pipe(fileinclude({indent: true}))
         .pipe(rename({
             extname: ""
         }))
