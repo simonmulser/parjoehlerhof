@@ -21,5 +21,5 @@ gulp.task('fileinclude', function() {
 });
 
 gulp.task("watch", function(){
-    gulp.watch(path.join(paths.templates, '*.tpl.html'), gulp.series('fileinclude'));
+    gulp.watch(path.join(paths.templates, '**/*.tpl.html'), gulp.series('fileinclude'));
 })
