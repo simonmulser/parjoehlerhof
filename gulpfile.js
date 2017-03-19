@@ -4,11 +4,12 @@ var gulp = require('gulp'),
     path = require("path");
 
 var paths = {
-    templates: './templates'
+    templates: './templates',
+    dist: './docs'
 }
 
 gulp.task('fileinclude', function() {
-    return gulp.src(path.join(paths.templates, '*.tpl.html'))
+    return gulp.src(path.join(paths.templates, '**/*.tpl.html'))
         .pipe(fileinclude({indent: true}))
         .pipe(rename({
             extname: ""
@@ -16,5 +17,9 @@ gulp.task('fileinclude', function() {
         .pipe(rename({
             extname: ".html"
         }))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist));
 });
+
+gulp.task("watch", function(){
+    gulp.watch(path.join(paths.templates, '*.tpl.html'), gulp.series('fileinclude'));
+})
