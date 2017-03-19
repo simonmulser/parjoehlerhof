@@ -4,15 +4,34 @@
 		<title>Parjöhlerhof - Urlaub auf dem Bauernhof</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
 		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
 
-			@@include('de/_header.html')
+			<!-- Header -->
+			<header id="header" class="alt">
+			    <h1><a href="index.html">Parjöhlerhof</a> Urlaub auf dem Bauernhof</h1>
+			    <nav id="nav">
+			        <ul>
+			            <li><a href="index.html">Home</a></li>
+			            <li><a href="wohnungen.html">Wohnungen</a></li>
+			            <li><a href="aktivitaeten.html">Aktivitäten</a></li>
+			            <li><a href="anfahrt.html">Anfahrt</a></li>
+			            <li><a href="mailto:parjoehlerhof@bb44.it" class="button">Kontakt</a></li>
+			        </ul>
+			    </nav>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+			    <h2>Parjöhlerhof</h2>
+			    <p>Authentischer Urlaub auf dem Bauernhof in Villanders - Südtirol</p>
+			</section>
+
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -33,18 +52,24 @@
 
 				</section>
 
-			@@include('de/_footer.html')
+			<!-- Footer -->
+			<footer id="footer">
+			    <ul class="copyright">
+			        <li>&copy; Parjöhlerhof. Alle Rechte vorbehalten.</li>
+			    </ul>
+			</footer>
+
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollgress.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
