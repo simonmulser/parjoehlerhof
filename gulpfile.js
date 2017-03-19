@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     fileinclude = require('gulp-file-include'),
     rename = require('gulp-rename'),
-    path = require("path");
+    path = require('path');
 
 var paths = {
     templates: './templates',
