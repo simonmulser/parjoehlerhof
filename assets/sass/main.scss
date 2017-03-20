@@ -765,6 +765,22 @@
 		margin: 0 0 _size(element-margin) 0;
 	}
 
+/* Gallery */
+
+	.my-gallery figure {
+		float: left;
+		margin: 0 0 2em 0;
+
+		a {
+			border: 0;
+
+			img {
+				width: 9.5em;
+			}
+		}
+
+	}
+
 /* Table */
 
 	.table-wrapper {

@@ -1644,6 +1644,15 @@ ul {
 dl {
   margin: 0 0 2em 0; }
 
+/* Gallery */
+.my-gallery figure {
+  float: left;
+  margin: 0 0 2em 0; }
+  .my-gallery figure a {
+    border: 0; }
+    .my-gallery figure a img {
+      width: 9.5em; }
+
 /* Table */
 .table-wrapper {
   -webkit-overflow-scrolling: touch;
