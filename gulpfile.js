@@ -29,7 +29,7 @@ gulp.task("watch", function(){
 })
 
 gulp.task('sass', function () {
-  return gulp.src(path.join(paths.sass, '/assets/sass/**/*.scss'))
+  return gulp.src(path.join(paths.sass, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
 });
