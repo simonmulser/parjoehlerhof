@@ -26,7 +26,7 @@
 		boxModel: 'border',
 		grid: ( gutters: 2em ),
 		conditionals: true,
-		containers: 60em,
+		containers: 50em,
 		breakpoints: (
 			narrow: (
 				containers: 90%,
@@ -95,6 +95,7 @@
 		font-size: 2.25em;
 		line-height: 1.5em;
 		letter-spacing: -0.035em;
+		font-weight: 400;
 	}
 
 	h3 {
@@ -1186,7 +1187,7 @@
 	#banner {
 		background-attachment:	scroll,							fixed;
 		background-color:		#666;
-		background-image:		url('images/overlay.png'),		url('../../images/banner.jpg');
+		background-image:		linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner.jpg");
 		background-position:	top left,						center center;
 		background-repeat:		repeat,							no-repeat;
 		background-size:		auto,							cover;
@@ -1241,7 +1242,6 @@
 /* Main */
 
 	#main {
-		padding: 4em 0;
 
 		> header {
 			text-align: center;
@@ -1263,17 +1263,11 @@
 		}
 	}
 
-	body.landing {
-		#main {
-			margin-top: -14em;
-		}
-	}
-
 /* Footer */
 
 	#footer {
-		background: #f0f0f0;
-		padding: 4em 0 6em 0;
+		background: #8FCFF0;
+		padding: 4em 0 4em 0;
 		text-align: center;
 
 		.icons {
@@ -1390,7 +1384,7 @@
 		/* Banner */
 
 			#banner {
-				padding: 10em 0 18em 0;
+				padding: 10em 0 12em 0;
 			}
 
 	}
