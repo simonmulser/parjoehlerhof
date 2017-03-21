@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     i18n = require('gulp-html-i18n'),
+    clean = require('gulp-clean'),
     path = require('path');
 
 var paths = {
@@ -60,9 +61,16 @@ gulp.task('fonts', task.fonts = function(){
     .pipe(gulp.dest(path.join(paths.dist, paths.fonts)));
 });
 
+gulp.task('clean', task.clean = function(){
+    return gulp.src([path.join(paths.tmp, '*'), path.join(paths.dist, '*')])
+    .pipe(clean());
+});
+
 gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize'));
 
-gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts'))
+gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts'));
+
+gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
 gulp.task("watch", function(){
     gulp.watch(path.join(paths.templates, '**/*.html'), gulp.series('pages'));
