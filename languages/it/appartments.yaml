@@ -1,2 +1,19 @@
 name: Appartamenti
 subheading: i nostri appartamenti
+heading: Für jeden Geschmack etwas
+text: Disponiamo di 3 diversi appartamenti.
+heading_panorama: appartamento Panorama
+text_panorama: Da 1 a 2 persone. Prezzo giornaliero a 40€ - 44€.
+heading_bergblick: appartamento Bergblick
+text_bergblick: Da 2 a 4 persone. Prezzo giornaliero per 2 persone 46€, per ogni persona in piu 10€.
+heading_waldruhe: appartamento Waldruhe
+text_waldruhe: Da 2 a 4 persone. Prezzo giornaliero per 2 persone 42€, per ogni persona in piu 10€.
+alt_living_panorama: La cucina abitabile dell' appartamento Panorama
+alt_bed_panorama: La camera da letto dell' appartamento Panorama
+alt_bath_panorama: Il bagno dell appartamento Panorama
+alt_living_bergblick: La cucina abitabile dell' appartamento Bergblick
+alt_bed_bergblick: La camera da letto dell' appartamento Bergblick
+alt_bath_bergblick: Il bagno dell appartamento Bergblick
+alt_living_waldruhe: La cucina abitabile dell' appartamento Waldruhe
+alt_bed_waldruhe: La camera da letto dell' appartamento Waldruhe
+alt_bath_waldruhe: Il bagno dell appartamento Waldruhe

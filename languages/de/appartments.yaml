@@ -1,2 +1,19 @@
 name: Wohnungen
 subheading: unsere Wohnungen
+heading: Für jeden Geschmack etwas
+text: Es stehen Ihnen 3 verschiedene Wohnungen zur Verfügung.
+heading_panorama: Wohnung Panorama
+text_panorama: Für 1 - 2 Personen. Preis pro Tag 40€ - 44€.
+heading_bergblick: Wohnung Bergblick
+text_bergblick: Für 2 - 4 Personen. Preis pro Tag 46€ für 2 Personen, jede weitere Person 10€.
+heading_waldruhe: Wohnung Waldruhe
+text_waldruhe: Für 2 - 4 Personen. Preis pro Tag 42€ für 2 Personen, jede weitere Person 10€.
+alt_living_panorama: Das Wohnküche des Panorama Zimmers
+alt_bed_panorama: Das Bett des Panorama Zimmers
+alt_bath_panorama: Das Bad des Panorama Zimmers
+alt_living_bergblick: Das Wohnküche des Bergblick Zimmers
+alt_bed_bergblick: Das Bett des Bergblick Zimmers
+alt_bath_bergblick: Das Bad des Bergblick Zimmers
+alt_living_waldruhe: Das Wohnküche des Waldruhe Zimmers
+alt_bed_waldruhe: Das Bett des Waldruhe Zimmers
+alt_bath_waldruhe: Das Bad des Waldruhe Zimmers

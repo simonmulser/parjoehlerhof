@@ -24,24 +24,95 @@
 				<section id="main" class="container">
 
 					<section class="box">
-						<h2>Für jeden Geschmack etwas</h2>
-						<p>Es stehen 3 verschiedene Wohnungen zur Verfügung.</p>
+						<h2>${{ appartments.heading }}$</h2>
+						<p>${{ appartments.text }}$</p>
 
-						<h3>Wohnung Panorama</h3>
-						<p>Für 1 - 2 Personen. Preis pro Tag 40€ - 44€.</p>
+						<h3>${{ appartments.heading_panorama}}$ </h3>
+						<p>${{ appartments.text_panorama }}$</p>
 
-						@@include('_panoramagallery.html')
+						<div class="my-gallery row" itemscope itemtype="http://schema.org/ImageGallery">
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/panorama/living_4.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/panorama/thumbnails/living_4.jpg" itemprop="thumbnail" alt="${{ appartments.alt_living_panorama }}$" />
+						        </a>
+						    </figure>
 
-						<h3>Wohnung Bergblick</h3>
-						<p>Für 2 - 4 Personen. Preis pro Tag 46€ für 2 Personen, jede weitere Person 10€.</p>
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/panorama/bed_2.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/panorama/thumbnails/bed_2.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bed_panorama }}$" />
+						        </a>
+						    </figure>
 
-						@@include('_panoramagallery.html')
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/panorama/bath_1.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/panorama/thumbnails/bath_1.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bath_panorama }}$" />
+						        </a>
+						    </figure>
 
-						<h3>Wohnung Waldruhe</h3>
-						<p>Für 2 - 4 Personen. Preis pro Tag 42€ für 2 Personen, jede weitere Person 10€.</p>
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/panorama/bath_2.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/panorama/thumbnails/bath_2.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bath_panorama }}$" />
+						        </a>
+						    </figure>
+						</div>
 
-						@@include('_panoramagallery.html')
+						<h3>${{ appartments.heading_bergblick }}$</h3>
+						<p>${{ appartments.text_bergblick }}$</p>
 
+						<div class="my-gallery row" itemscope itemtype="http://schema.org/ImageGallery">
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/bergblick/living_1.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/bergblick/thumbnails/living_1.jpg" itemprop="thumbnail" alt="${{ appartments.alt_living_bergblick }}$" />
+						        </a>
+						    </figure>
+
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/bergblick/living_2.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/bergblick/thumbnails/living_2.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bed_bergblick }}$" />
+						        </a>
+						    </figure>
+
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/bergblick/bed_1.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/bergblick/thumbnails/bed_1.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bath_bergblick }}$" />
+						        </a>
+						    </figure>
+
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/bergblick/bath_2.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/bergblick/thumbnails/bath_2.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bath_bergblick }}$" />
+						        </a>
+						    </figure>
+						</div>
+
+						<h3>${{ appartments.heading_waldruhe }}$</h3>
+						<p>${{ appartments.text_waldruhe }}$</p>
+
+						<div class="my-gallery row" itemscope itemtype="http://schema.org/ImageGallery">
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/waldruhe/living_3.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/waldruhe/thumbnails/living_3.jpg" itemprop="thumbnail" alt="${{ appartments.alt_living_waldruhe }}$" />
+						        </a>
+						    </figure>
+
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/waldruhe/bed_1.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/waldruhe/thumbnails/bed_1.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bed_waldruhe }}$" />
+						        </a>
+						    </figure>
+
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/waldruhe/bed_4.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/waldruhe/thumbnails/bed_4.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bath_waldruhe }}$" />
+						        </a>
+						    </figure>
+
+						    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+						        <a href="../images/appartments/waldruhe/bath_1.jpg" itemprop="contentUrl" data-size="1500x1000">
+						            <img src="../images/appartments/waldruhe/thumbnails/bath_1.jpg" itemprop="thumbnail" alt="${{ appartments.alt_bath_waldruhe }}$" />
+						        </a>
+						    </figure>
+						</div>
 					</section>
 
 				</section>
