@@ -1282,7 +1282,7 @@
 /* Footer */
 
 	#footer {
-		background: #8FCFF0;
+		background: _palette(accent3, bg);
 		padding: 4em 0 4em 0;
 		text-align: center;
 
@@ -1298,8 +1298,8 @@
 		}
 
 		.copyright {
-			color: _palette(fg-light);
-			font-size: 0.9em;
+			color: _palette(accent3, fg-light);
+			font-size: 1em;
 			line-height: 1em;
 			margin: 2em 0 0 0;
 			padding: 0;
