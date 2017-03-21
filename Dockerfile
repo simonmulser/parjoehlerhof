@@ -1,5 +1,5 @@
 FROM nginx:1.11.10
-COPY docs /usr/share/nginx/html
+COPY dist /usr/share/nginx/html
 
 EXPOSE 80
 

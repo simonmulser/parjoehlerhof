@@ -8,7 +8,10 @@ var gulp = require('gulp'),
 var paths = {
     templates: './templates',
     sass: './assets/sass',
-    dist: './docs',
+    js: './assets/js',
+    fonts: './assets/fonts',
+    images: './images',
+    dist: './dist',
     tmp: './tmp'
 }
 
@@ -36,13 +39,30 @@ gulp.task('localize', function() {
     .pipe(gulp.dest(paths.dist));
 });
 
-gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize'));
-
-gulp.task('sass', function () {
+gulp.task('sass', task.sass = function () {
   return gulp.src(path.join(paths.sass, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
 });
+
+gulp.task('images', task.images = function(){
+    return gulp.src(path.join(paths.images, '**/*'))
+    .pipe(gulp.dest(path.join(paths.dist, 'images')));
+})
+
+gulp.task('js', task.js = function(){
+    return gulp.src(path.join(paths.js, '**/*'))
+    .pipe(gulp.dest(path.join(paths.dist, paths.fonts)));
+});
+
+gulp.task('fonts', task.fonts = function(){
+    return gulp.src(path.join(paths.fonts, '**/*'))
+    .pipe(gulp.dest(path.join(paths.dist, paths.fonts)));
+});
+
+gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize'));
+
+gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts'))
 
 gulp.task("watch", function(){
     gulp.watch(path.join(paths.templates, '**/*.html'), gulp.series('pages'));
