@@ -13,7 +13,19 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				@@include('_header.html')
+				<header id="header" class="alt">
+				    <h1><a href="index.html">${{ header.bold }}$</a> ${{ header.text }}$</h1>
+				    <nav id="nav">
+				        <ul>
+				            <li><a href="index.html">${{ menu.home }}$</a></li>
+				            <li><a href="appartments.html">${{ menu.appartments }}$</a></li>
+				            <li><a href="activities.html">${{ menu.activities }}$</a></li>
+				            <li><a href="drive.html">${{ menu.drive }}$</a></li>
+				            <li><a href="mailto:parjoehlerhof@bb44.it" class="button">${{ menu.contact }}$</a></li>
+				        </ul>
+				    </nav>
+				</header>
+
 
 			<!-- Banner -->
 				<section id="banner" class="big">
@@ -41,7 +53,13 @@
 
 				</section>
 
-			@@include('_footer.html')
+			<!-- Footer -->
+			<footer id="footer">
+			    <ul class="copyright">
+			        <li>&copy; Parjöhlerhof. Alle Rechte vorbehalten.</li>
+			    </ul>
+			</footer>
+
 
 		</div>
 

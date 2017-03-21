@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Parjöhlerhof - ${{ index.title }}$</title>
+		<title>Parjöhlerhof - Urlaub auf dem Bauernhof</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -10,15 +10,28 @@
 		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 	</head>
 	<body class="landing">
+<!-- trace:tmp/index.html -->
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				@@include('_header.html')
+				<header id="header" class="alt">
+				    <h1><a href="index.html">Parjöhlerhof</a> Urlaub auf dem Bauernhof</h1>
+				    <nav id="nav">
+				        <ul>
+				            <li><a href="index.html">Home</a></li>
+				            <li><a href="appartments.html">Wohnungen</a></li>
+				            <li><a href="activities.html">Aktivitäten</a></li>
+				            <li><a href="drive.html">Anfahrt</a></li>
+				            <li><a href="mailto:parjoehlerhof@bb44.it" class="button">Contact</a></li>
+				        </ul>
+				    </nav>
+				</header>
+
 
 			<!-- Banner -->
 				<section id="banner" class="big">
-				    <h2>${{ index.banner }}$</h2>
-				    <p>${{ index.subheading }}$</p>
+				    <h2>Parjöhlerhof</h2>
+				    <p>Authentischer Urlaub auf dem Bauernhof in Villanders - Südtirol</p>
 				</section>
 
 
@@ -41,7 +54,13 @@
 
 				</section>
 
-			@@include('_footer.html')
+			<!-- Footer -->
+			<footer id="footer">
+			    <ul class="copyright">
+			        <li>&copy; Parjöhlerhof. Alle Rechte vorbehalten.</li>
+			    </ul>
+			</footer>
+
 
 		</div>
 

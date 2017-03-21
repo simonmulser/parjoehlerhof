@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Parjöhlerhof - ${{ index.title }}$</title>
-		<meta charset="utf-8" />
+		<title>Parjöhlerhof - Anfahrt </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -10,17 +9,29 @@
 		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 	</head>
 	<body class="landing">
+<!-- trace:tmp/drive.html -->
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				@@include('_header.html')
+				<header id="header" class="alt">
+				    <h1><a href="index.html">Parjöhlerhof</a> Urlaub auf dem Bauernhof</h1>
+				    <nav id="nav">
+				        <ul>
+				            <li><a href="de/index.html">Home</a></li>
+				            <li><a href="de/appartments.html">Wohnungen</a></li>
+				            <li><a href="de/activities.html">Aktivitäten</a></li>
+				            <li><a href="de/drive.html">Anfahrt</a></li>
+				            <li><a href="mailto:parjoehlerhof@bb44.it" class="button">Contact</a></li>
+				        </ul>
+				    </nav>
+				</header>
+
 
 			<!-- Banner -->
-				<section id="banner" class="big">
-				    <h2>${{ index.banner }}$</h2>
-				    <p>${{ index.subheading }}$</p>
+				<section id="banner">
+				    <h2>${{ drive.title }} </h2>
+				    <p>${{ drive.subheading }} </p>
 				</section>
-
 
 			<!-- Main -->
 				<section id="main" class="container">
@@ -29,19 +40,25 @@
 						<h2>Urlaub auf dem Bauernhof in Südtirol</h2>
 						<p>Ihr Ziel ist der auf 1370 Metern Meereshöhe in Villanders, Südtirol, gelegene Parjöhlerhof der Familie Fink. Der traditionelle Bauernhof umgeben von bewirtschafteten Wiesen und naturbelassenen Wäldern ist ideal für einen erholsamen Urlaub. In mitten der Natur fällt es leicht dem alltäglichen Trott zu entfliehen und die Einfachheit des Lebens zu genießen</p>
 
-						<span class="image featured"><img src="../images/pic01.jpg" alt="" /></span>
+						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
 
 
 						<p>Ein Urlaub auf dem Bauernhof bietet Ihnen ein abwechslungsreiches Angebot. Sei es das traditionelle höfische Leben mit den vielen Tieren, die kulturellen Angebote in den nahe liegenden Städten oder die vielen Wandergebiete Südtirols, es ist für jeden etwas dabei.</p>
 
-						<span class="image featured"><img src="../images/pic02.jpg" alt="" /></span>
+						<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
 
 						<p> Vom Parjöhlerhof ausgehend stehen Ihnen vielfältige Freizeitaktivitäten zur Verfügung. Gemütliche Spaziergänge durch die Weinberghänge und den historischen Dorfkern oder herrliche Wanderungen auf der Villanderer Alm. In kultureller Hinsicht können das Künstlerstädtchen Klausen, die Bischofstadt Brixen und die Hauptstadt Bozen besucht werden.</p>
 					</section>
 
 				</section>
 
-			@@include('_footer.html')
+			<!-- Footer -->
+			<footer id="footer">
+			    <ul class="copyright">
+			        <li>&copy; Parjöhlerhof. Alle Rechte vorbehalten.</li>
+			    </ul>
+			</footer>
+
 
 		</div>
 
