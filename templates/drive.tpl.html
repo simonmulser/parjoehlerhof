@@ -24,17 +24,31 @@
 				<section id="main" class="container">
 
 					<section class="box">
-						<h2>Urlaub auf dem Bauernhof in Südtirol</h2>
-						<p>Ihr Ziel ist der auf 1370 Metern Meereshöhe in Villanders, Südtirol, gelegene Parjöhlerhof der Familie Fink. Der traditionelle Bauernhof umgeben von bewirtschafteten Wiesen und naturbelassenen Wäldern ist ideal für einen erholsamen Urlaub. In mitten der Natur fällt es leicht dem alltäglichen Trott zu entfliehen und die Einfachheit des Lebens zu genießen</p>
+						<div class="row">
+							<div class="6u 12u(mobilep)">
+								<h3>${{ drive.address }}$</h3>
+									<p>
+									Fam. <br />
+									Fink Hubert <br />
+									Parjöhlerhof <br />
+									Oberland 25 <br />
+									I-39040 Villanders - Südtirol<br />
+									</p>
+							</div>
+							<div class="6u 12u(mobilep)">
+								<h3>${{ drive.description }}$</h3>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+							</div>
+						</div>
+						<h3>${{ drive.map }}$</h3>
+						<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.6131782938846!2d11.514511315382334!3d46.63440366261928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477809625c0ee303%3A0x82b7ff182f8b8a6e!2sParj%C3%B6hlerhof!5e0!3m2!1sen!2sat!4v1490093957132" allowfullscreen></iframe>
+						<br />
+						<p>
+							${{ drive.latitude }}$: 46.6344037, ${{ drive.longitude }}$: 11.5145113
+						</p>
 
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-
-
-						<p>Ein Urlaub auf dem Bauernhof bietet Ihnen ein abwechslungsreiches Angebot. Sei es das traditionelle höfische Leben mit den vielen Tieren, die kulturellen Angebote in den nahe liegenden Städten oder die vielen Wandergebiete Südtirols, es ist für jeden etwas dabei.</p>
-
-						<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-
-						<p> Vom Parjöhlerhof ausgehend stehen Ihnen vielfältige Freizeitaktivitäten zur Verfügung. Gemütliche Spaziergänge durch die Weinberghänge und den historischen Dorfkern oder herrliche Wanderungen auf der Villanderer Alm. In kultureller Hinsicht können das Künstlerstädtchen Klausen, die Bischofstadt Brixen und die Hauptstadt Bozen besucht werden.</p>
 					</section>
 
 				</section>
@@ -51,6 +65,5 @@
 			<script src="../assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
-
 	</body>
 </html>
