@@ -4,6 +4,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     i18n = require('gulp-html-i18n'),
     clean = require('gulp-clean'),
+    deleteLines = require('gulp-delete-lines'),
+    merge = require('merge-stream'),
     path = require('path');
 
 var paths = {
@@ -40,6 +42,25 @@ gulp.task('localize', function() {
     .pipe(gulp.dest(paths.dist));
 });
 
+gulp.task('deletelanguagemenuitem', task.deletelanguagemenuitem = function () {
+    var german = gulp.src(path.join(paths.dist, 'de/**/*.html'))
+                    .pipe(deleteLines({
+                        'filters': [
+                        /DEU<\/a><\/li>/i
+                        ]
+                    }))
+                    .pipe(gulp.dest(path.join(paths.dist, 'de')));
+
+    var italian = gulp.src(path.join(paths.dist, 'it/**/*.html'))
+                    .pipe(deleteLines({
+                        'filters': [
+                        /ITA<\/a><\/li>/i
+                        ]
+                    }))
+                    .pipe(gulp.dest(path.join(paths.dist, 'it')));
+    return merge(german, italian);
+});
+
 gulp.task('sass', task.sass = function () {
   return gulp.src(path.join(paths.sass, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
@@ -66,7 +87,7 @@ gulp.task('clean', task.clean = function(){
     .pipe(clean());
 });
 
-gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize'));
+gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize', 'deletelanguagemenuitem'));
 
 gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts'));
 
