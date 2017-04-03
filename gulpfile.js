@@ -74,7 +74,7 @@ gulp.task('images', task.images = function(){
 
 gulp.task('js', task.js = function(){
     return gulp.src(path.join(paths.js, '**/*'))
-    .pipe(gulp.dest(path.join(paths.dist, paths.fonts)));
+    .pipe(gulp.dest(path.join(paths.dist, paths.js)));
 });
 
 gulp.task('fonts', task.fonts = function(){
