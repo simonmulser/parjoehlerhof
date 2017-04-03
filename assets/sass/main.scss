@@ -1031,6 +1031,10 @@
 						border-radius: _size(border-radius);
 					}
 
+					a.link--language {
+						padding: 0.5em;
+					}
+
 					a:not(.button) {
 						color: _palette(header, fg-bold);
 						display: inline-block;
@@ -1299,7 +1303,6 @@
 
 		.copyright {
 			color: _palette(accent3, fg-light);
-			font-size: 1em;
 			line-height: 1em;
 			margin: 2em 0 0 0;
 			padding: 0;
