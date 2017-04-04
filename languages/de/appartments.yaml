@@ -1,13 +1,16 @@
 name: Wohnungen
-subheading: unsere Wohnungen
-heading: Für jeden Geschmack etwas
-text: Es stehen Ihnen 3 verschiedene Wohnungen zur Verfügung.
+subheading: die Wohnungen auf unserem Bauernhof
+heading: Für jeden Geschmack etwas dabei
+text: Auf unserem Bauernhof stehen Ihnen drei verschiedene Wohnungen zur Verfügung. Die Wohnungen verfügen über eine komplett eingerichtete Küche, Bad, TV und W-LAN und sind mit frischer Bettwäsche, Handtücher sowie Geschirrtücher ausgestattet. Für einen gelungen Start in den Tag gibt es die Möglichkeit hofeigene Produkte wie Eier und Milch und Brötchen vom Bäcker zu erwerben, welche dann früh morgens vor die Wohnungstür geliefert werden. Für die warmen Sommermonaten gibt es eine weiträumige Liegewiese und eine gemütliche Grillmöglichkeit. Unter Apsrache sind auch Haustiere erlaubt. (!!! überdachter parkplatz !!!)
 heading_panorama: Wohnung Panorama
-text_panorama: Für 1 - 2 Personen. Preis pro Tag 40€ - 44€.
+text_panorama: Die Wohnung Panorama ist unsere kleinste Wohnung. Sie verfügt über großen Wohnraum mit Küchenzeile, Essbereich und ein Doppelbett. Weiteres gibt es ein großes Badezimmer mit Badewanne und WC. Vom Wohnzimmer aus gelangen Sie direkt auf den Balkon mit herrlichen Blick auf die Bergwelt der Dolomiten.
+preis_panorama: Für 1 - 2 Personen. Preis pro Tag 40€ - 44€.
 heading_bergblick: Wohnung Bergblick
-text_bergblick: Für 2 - 4 Personen. Preis pro Tag 46€ für 2 Personen, jede weitere Person 10€.
+text_bergblick: Die Wohnung verfügt über eine große Wohnküche mit Küchenzeile, Essbereich und Schlafsofa. Das Schlafzimmer ist mit einem großem Doppelbett ausgestattet. Das Bad verfügt über eine Dusche und ein WC. Der Balkon bietet einen herrlichen Ausblick auf das Dolomitenmassiv.
+preis_bergblick: Für 2 - 4 Personen. Preis pro Tag 46€ für 2 Personen, jede weitere Person 10€.
 heading_waldruhe: Wohnung Waldruhe
-text_waldruhe: Für 2 - 4 Personen. Preis pro Tag 42€ für 2 Personen, jede weitere Person 10€.
+text_waldruhe: Diese Wohnung verfügt über große Wohnküche mit Küchenzeile, Essbereich und Schlafsofa. Das Schlafzimmer ist mit einem großem Doppelbett ausgestattet. Das Bad verfügt über eine Dusche und ein WC. Der Balkon bietet Ihnen einen Blick auf unsere grünen Wiesen und Wälder.
+preis_waldruhe: Für 2 - 4 Personen. Preis pro Tag 42€ für 2 Personen, jede weitere Person 10€.
 alt_living_panorama: Das Wohnküche des Panorama Zimmers
 alt_bed_panorama: Das Bett des Panorama Zimmers
 alt_bath_panorama: Das Bad des Panorama Zimmers
