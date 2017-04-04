@@ -15,7 +15,8 @@ var paths = {
     fonts: './assets/fonts',
     images: './images',
     dist: './dist',
-    tmp: './tmp'
+    tmp: './tmp',
+    languages : './languages'
 }
 
 var task = {};
@@ -101,5 +102,5 @@ gulp.task('build', task.build = gulp.series(task.clean, task.default));
 gulp.task("watch", function(){
     gulp.watch(path.join(paths.templates, '**/*.html'), gulp.series('pages'));
     gulp.watch(path.join(paths.sass, '**/*.scss'), gulp.series('sass'));
-
+    gulp.watch(path.join(paths.languages, '**/*.yaml'), gulp.series('localize', 'deletelanguagemenuitem'));
 })
