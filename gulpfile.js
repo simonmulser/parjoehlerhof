@@ -82,6 +82,11 @@ gulp.task('fonts', task.fonts = function(){
     .pipe(gulp.dest(path.join(paths.dist, paths.fonts)));
 });
 
+gulp.task('dockerfile', task.dockerfile = function(){
+    return gulp.src('Dockerfile')
+        .pipe(gulp.dest(paths.dist));
+})
+
 gulp.task('clean', task.clean = function(){
     return gulp.src([path.join(paths.tmp, '*'), path.join(paths.dist, '*')])
     .pipe(clean());
@@ -89,7 +94,7 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize', 'deletelanguagemenuitem'));
 
-gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts'));
+gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts', 'dockerfile'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
