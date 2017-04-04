@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 var paths = {
     templates: './templates',
     sass: './assets/sass',
+    css: './assets/css',
     js: './assets/js',
     fonts: './assets/fonts',
     images: './images',
@@ -68,6 +69,12 @@ gulp.task('sass', task.sass = function () {
     .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
 });
 
+gulp.task('css', task.sass = function () {
+  return gulp.src(path.join(paths.css, '**/*.css'))
+    .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
+});
+
+
 gulp.task('images', task.images = function(){
     return gulp.src(path.join(paths.images, '**/*'))
     .pipe(gulp.dest(path.join(paths.dist, 'images')));
@@ -95,7 +102,7 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize', 'deletelanguagemenuitem'));
 
-gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'images', 'js', 'fonts', 'dockerfile'));
+gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'css', 'images', 'js', 'fonts', 'dockerfile'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
