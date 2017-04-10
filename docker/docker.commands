@@ -1,0 +1,1 @@
+docker cp ../dist/. parjoehlerhof:/usr/share/nginx/html/

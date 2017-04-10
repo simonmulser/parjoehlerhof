@@ -1,5 +1,4 @@
 FROM nginx:1.11.10
-COPY . /usr/share/nginx/html
 
 EXPOSE 80
 
