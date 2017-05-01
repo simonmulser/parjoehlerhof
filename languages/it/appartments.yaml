@@ -1,16 +1,16 @@
 name: Appartamenti
-subheading: i nostri appartamenti
-heading: Für jeden Geschmack etwas
-text: Disponiamo di 3 diversi appartamenti.
-heading_panorama: appartamento Panorama
-price_panorama:
-text_panorama: Da 1 a 2 persone. Prezzo giornaliero a 40€ - 44€.
+subheading: Gli appartamenti della nostra fattoria
+heading: Appartamenti adatti ad ogni gusto
+text: Nella nostra fattoria siamo pronti ad accoglierVi in tre appartamenti. Le abitazioni comprendono nei loro locali una cucina pienamente attrezzata, un locale bagno, doppi letti, TV e Wi-Fi. Sono inoltre messi a disposizione biancheria da letto, asciugamani e canovacci. Per cominciare al meglio la giornata potrete usufruire dei nostri prodotti caserecci, come latte, uova e pane appena sfornato, che saremo lieti di portarVi al vostro appartamento. Nei mesi caldi i nostri prati sono il luogo ideale per prendere il sole, senza nominare la possibilità di fare grigliate in luoghi accoglienti nei pressi del maso. Su richiesta è possibile portare animali domestici. Possibilità parcheggio al coperto.
+heading_panorama: Appartamento Panorama
+price_panorama: Da 1 a 2 persone. Prezzo giornaliero a 40€ - 44€.
+text_panorama: Il nostro appartamento panorama con i suoi 30 mq è l’appartamento più piccolo ed è adatto per una o due persone. Lo spazioso tinello comprende uno spazio per mangiare, un angolo cucina, un doppio letto e un vasto armadio per vestiti. Il locale bagno dispone di una vasca da bagno con funzione doccia e un WC. Dal tinello si giunge su un balcone con vista fantastica sulle dolomiti.
 heading_bergblick: appartamento Bergblick
-price_bergblick:
-text_bergblick: Da 2 a 4 persone. Prezzo giornaliero per 2 persone 46€, per ogni persona in piu 10€.
+price_bergblick: Da 2 a 4 persone. Prezzo giornaliero per 2 persone 46€, per ogni persona in piu 10€.
+text_bergblick: L’appartamento con i suoi 40 mq è leggermente più grande e offre lo spazio per due fino a quattro persone. Il vasto tinello dispone di angolo cucina pienamente attrezzato, spazio per mangiare e un divano letto. Nella camera da letto troverete un doppio letto e un armadio per vestiti. Il locale bagno comprende doccia e WC. Dal balcone proprio potrete godere di una spettacolare vista sulle Dolomiti.
 heading_waldruhe: appartamento Waldruhe
-price_waldruhe:
-text_waldruhe: Da 2 a 4 persone. Prezzo giornaliero per 2 persone 42€, per ogni persona in piu 10€.
+price_waldruhe: Da 2 a 4 persone. Prezzo giornaliero per 2 persone 42€, per ogni persona in piu 10€.
+text_waldruhe: L’appartamento comprende un area pari a 40 mq ed è adatto a due fino a quattro persone. Dispone di vasto tinello con angolo cucina, area per mangiare e divano letto. Nella camera da letto troverete un doppio letto e un armadio per vestiti. Il locale bagno comprende una doccia e WC. Il balcone proprio invita ad ammirare i nostri prati verdi e le foreste che circondano il luogo.
 alt_living_panorama: La cucina abitabile dell' appartamento Panorama
 alt_bed_panorama: La camera da letto dell' appartamento Panorama
 alt_bath_panorama: Il bagno dell appartamento Panorama
