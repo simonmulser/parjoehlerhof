@@ -49,7 +49,7 @@ gulp.task('deletelanguagemenuitem', task.deletelanguagemenuitem = function () {
     var german = gulp.src(path.join(paths.dist, 'de/**/*.html'))
                     .pipe(deleteLines({
                         'filters': [
-                        /DEU<\/a><\/li>/i
+                        />DEU<\/a><\/li>/i
                         ]
                     }))
                     .pipe(gulp.dest(path.join(paths.dist, 'de')));
@@ -57,7 +57,7 @@ gulp.task('deletelanguagemenuitem', task.deletelanguagemenuitem = function () {
     var italian = gulp.src(path.join(paths.dist, 'it/**/*.html'))
                     .pipe(deleteLines({
                         'filters': [
-                        /ITA<\/a><\/li>/i
+                        />ITA<\/a><\/li>/i
                         ]
                     }))
                     .pipe(gulp.dest(path.join(paths.dist, 'it')));
