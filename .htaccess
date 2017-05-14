@@ -12,7 +12,6 @@ RewriteEngine On
 
 RewriteCond %{HTTP:Accept-Language} ^it.*$ [NC]
 RewriteRule ^$ /it/ [L,R=301]
-
 RewriteRule ^$ /de/ [L,R=301]
 
 RewriteRule ^(.*)\/impressum\.html$ /$1/imprint [L,R=301]
