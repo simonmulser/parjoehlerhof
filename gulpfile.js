@@ -17,13 +17,13 @@ var paths = {
     fonts: './assets/fonts',
     images: './images',
     dist: './dist',
-    tmp: './tmp',
     languages : './languages'
 }
 
 var task = {};
 
-gulp.task('fileinclude', function() {
+gulp.task('html', function() {
+
     return gulp.src(path.join(paths.templates, '**/*.tpl.html'))
         .pipe(fileinclude({indent: true}))
         .pipe(rename({
@@ -32,17 +32,12 @@ gulp.task('fileinclude', function() {
         .pipe(rename({
             extname: ".html"
         }))
-        .pipe(gulp.dest(paths.tmp));
-});
-
-gulp.task('localize', function() {
-  return gulp.src(path.join(paths.tmp, '**/*.html'))
-    .pipe(i18n({
-      langDir: './languages',
-      createLangDirs: true,
-      trace: true
-    }))
-    .pipe(gulp.dest(paths.dist));
+        .pipe(i18n({
+          langDir: './languages',
+          createLangDirs: true,
+          trace: true
+        }))
+        .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('deletelanguagemenuitem', task.deletelanguagemenuitem = function () {
@@ -96,11 +91,11 @@ gulp.task('fonts', task.fonts = function(){
 });
 
 gulp.task('clean', task.clean = function(){
-    return gulp.src([path.join(paths.tmp, '*'), path.join(paths.dist, '*')])
+    return gulp.src(path.join(paths.dist, '*'))
     .pipe(clean());
 });
 
-gulp.task('pages', task.pages = gulp.series('fileinclude', 'localize', 'deletelanguagemenuitem'));
+gulp.task('pages', task.pages = gulp.series('html', 'deletelanguagemenuitem'));
 
 gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'css', 'default-skin', 'images', 'js', 'fonts'));
 
@@ -109,5 +104,5 @@ gulp.task('build', task.build = gulp.series(task.clean, task.default));
 gulp.task("watch", function(){
     gulp.watch(path.join(paths.templates, '**/*.html'), gulp.series('pages'));
     gulp.watch(path.join(paths.sass, '**/*.scss'), gulp.series('sass'));
-    gulp.watch(path.join(paths.languages, '**/*.yaml'), gulp.series('localize', 'deletelanguagemenuitem'));
+    gulp.watch(path.join(paths.languages, '**/*.yaml'), gulp.series('deletelanguagemenuitem'));
 })
