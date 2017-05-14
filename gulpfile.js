@@ -62,18 +62,15 @@ gulp.task('deletelanguagemenuitem', task.deletelanguagemenuitem = function () {
     return merge(german, italian);
 });
 
-gulp.task('sass', task.sass = function () {
-  return gulp.src(path.join(paths.sass, '**/*.scss'))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
-});
-
 gulp.task('css', task.sass = function () {
 
   const cssFilter = filter('**/*.css', {restore: true});
   const scssFilter = filter('**/*.scss', {restore: true});
 
   return gulp.src(path.join(paths.css, '**/*'))
+    .pipe(scssFilter)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(scssFilter.restore)
     .pipe(cssFilter)
     .pipe(rev())
     .pipe(cssFilter.restore)
@@ -112,14 +109,12 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('html', 'deletelanguagemenuitem'));
 
-gulp.task('final_assets', task.pages = gulp.series('css', 'revReplace'))
-
-gulp.task('default', task.default = gulp.series('pages', 'sass', 'final_assets', 'images', 'js', 'fonts'));
+gulp.task('default', task.default = gulp.series('pages', 'css', 'images', 'js', 'fonts', 'revReplace'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
 gulp.task("watch", function(){
     gulp.watch(path.join(paths.templates, '**/*.html'), gulp.series('pages'));
-    gulp.watch(path.join(paths.sass, '**/*.scss'), gulp.series('sass'));
+    gulp.watch(path.join(paths.sass, '**/*.scss'), gulp.series('css'));
     gulp.watch(path.join(paths.languages, '**/*.yaml'), gulp.series('deletelanguagemenuitem'));
 })
