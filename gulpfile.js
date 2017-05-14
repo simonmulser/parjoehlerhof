@@ -10,7 +10,8 @@ var gulp = require('gulp'),
     filter = require('gulp-filter')
     rev = require('gulp-rev'),
     revReplace = require('gulp-rev-replace'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    minify = require('gulp-minify');
 
 var paths = {
     templates: './templates',
@@ -96,6 +97,9 @@ gulp.task('images', task.images = function(){
 
 gulp.task('js', task.js = function(){
     return gulp.src(path.join(paths.js, '**/*'))
+    .pipe(minify({
+        ignoreFiles: ['-min.js']
+    }))
     .pipe(gulp.dest(path.join(paths.dist, paths.js)));
 });
 
