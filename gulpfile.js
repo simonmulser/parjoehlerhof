@@ -66,13 +66,8 @@ gulp.task('sass', task.sass = function () {
 });
 
 gulp.task('css', task.sass = function () {
-  return gulp.src(path.join(paths.css, '**/*.css'))
+  return gulp.src(path.join(paths.css, '**/*'))
     .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
-});
-
-gulp.task('default-skin', task.sass = function () {
-  return gulp.src(path.join(paths.defaultskin, '**/*'))
-    .pipe(gulp.dest(path.join(paths.dist, '/assets/css/default-skin/')));
 });
 
 gulp.task('images', task.images = function(){
@@ -97,7 +92,7 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('html', 'deletelanguagemenuitem'));
 
-gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'css', 'default-skin', 'images', 'js', 'fonts'));
+gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'css', 'images', 'js', 'fonts'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
