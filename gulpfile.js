@@ -6,7 +6,10 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     deleteLines = require('gulp-delete-lines'),
     merge = require('merge-stream'),
-    path = require('path');
+    path = require('path'),
+    filter = require('gulp-filter')
+    rev = require('gulp-rev'),
+    revReplace = require('gulp-rev-replace');
 
 var paths = {
     templates: './templates',
@@ -66,8 +69,25 @@ gulp.task('sass', task.sass = function () {
 });
 
 gulp.task('css', task.sass = function () {
+
+  const cssFilter = filter('**/*.css', {restore: true});
+  const scssFilter = filter('**/*.scss', {restore: true});
+
   return gulp.src(path.join(paths.css, '**/*'))
-    .pipe(gulp.dest(path.join(paths.dist, '/assets/css')));
+    .pipe(cssFilter)
+    .pipe(rev())
+    .pipe(cssFilter.restore)
+    .pipe(gulp.dest(path.join(paths.dist, '/assets/css')))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task("revReplace", task.revReplace = function() {
+  var manifest = gulp.src(path.join(paths.dist, 'rev-manifest.json'));
+
+  return gulp.src(path.join(paths.dist, '**/*.html'))
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('images', task.images = function(){
@@ -92,7 +112,9 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('html', 'deletelanguagemenuitem'));
 
-gulp.task('default', task.default = gulp.parallel('pages', 'sass', 'css', 'images', 'js', 'fonts'));
+gulp.task('final_assets', task.pages = gulp.series('css', 'revReplace'))
+
+gulp.task('default', task.default = gulp.series('pages', 'sass', 'final_assets', 'images', 'js', 'fonts'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
