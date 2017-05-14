@@ -22,7 +22,7 @@ var paths = {
 
 var task = {};
 
-gulp.task('html', function() {
+gulp.task('html', task.html = function() {
 
     return gulp.src(path.join(paths.templates, '**/*.tpl.html'))
         .pipe(fileinclude({indent: true}))
