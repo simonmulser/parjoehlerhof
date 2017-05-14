@@ -11,6 +11,7 @@
     "gulp-file-include": "^1.0.0",
     "gulp-html-i18n": "^0.6.5",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
     "merge-stream": "^1.0.1"
   }
 }
