@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     path = require('path'),
     filter = require('gulp-filter')
     rev = require('gulp-rev'),
-    revReplace = require('gulp-rev-replace');
+    revReplace = require('gulp-rev-replace'),
+    cleanCSS = require('gulp-clean-css');
 
 var paths = {
     templates: './templates',
@@ -72,6 +73,7 @@ gulp.task('css', task.sass = function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(scssFilter.restore)
     .pipe(cssFilter)
+    .pipe(cleanCSS())
     .pipe(rev())
     .pipe(cssFilter.restore)
     .pipe(gulp.dest(path.join(paths.dist, '/assets/css')))
