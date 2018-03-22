@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     rev = require('gulp-rev'),
     revReplace = require('gulp-rev-replace'),
     cleanCSS = require('gulp-clean-css'),
-    minify = require('gulp-minify');
+    pump = require('pump'),
+    uglify = require('gulp-uglify');
 
 var paths = {
     templates: './templates',
@@ -95,13 +96,20 @@ gulp.task('images', task.images = function(){
     .pipe(gulp.dest(path.join(paths.dist, 'images')));
 })
 
-gulp.task('js', task.js = function(){
-    return gulp.src(path.join(paths.js, '**/*'))
-    .pipe(minify({
-        ignoreFiles: ['-min.js']
-    }))
-    .pipe(gulp.dest(path.join(paths.dist, paths.js)));
+gulp.task('js', function (cb) {
+  pump([
+      gulp.src(path.join(paths.js, '**/*.js')),
+      uglify(),
+      gulp.dest(path.join(paths.dist, paths.js))
+    ],
+    cb
+  );
 });
+
+gulp.task('htc', task.htc = function(){
+    return gulp.src(path.join(paths.js, '**/*.htc'))
+    .pipe(gulp.dest(path.join(paths.dist, paths.js)));
+})
 
 gulp.task('fonts', task.fonts = function(){
     return gulp.src(path.join(paths.fonts, '**/*'))
@@ -115,7 +123,7 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('html', 'deletelanguagemenuitem'));
 
-gulp.task('default', task.default = gulp.series('pages', 'css', 'images', 'js', 'fonts', 'revReplace'));
+gulp.task('default', task.default = gulp.series('pages', 'css', 'images', 'js', 'htc', 'fonts', 'revReplace'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
