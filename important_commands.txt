@@ -1,0 +1,2 @@
+rsync --delete -r --verbose -e='docker-machine ssh docker-droplet' dist/ :nginx/parjoehlerhof
+
