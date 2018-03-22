@@ -1197,10 +1197,11 @@
 	#banner {
 		background-attachment:	scroll,							fixed;
 		background-color:		#666;
-		background-image:		linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner.jpg");
+		background-image:       linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_2560.jpg");
 		background-position:	top left,						center center;
 		background-repeat:		repeat,							no-repeat;
 		background-size:		auto,							cover;
+
 		color: #fff;
 		padding: 12em 0 20em 0;
 		text-align: center;
@@ -1400,6 +1401,8 @@
 
 			#banner {
 				padding: 10em 0 12em 0;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_1680.jpg");
+
 			}
 
 	}
@@ -1426,6 +1429,7 @@
 
 			#banner {
 				background-attachment: scroll;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_1280.jpg");
 
 				h2 {
 					font-size: 3.5em;
@@ -1444,6 +1448,11 @@
 				font-size: 11pt;
 			}
 
+		/* Banner */
+
+			#banner {
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_980.jpg");
+			}
 	}
 
 /* Narrower */
@@ -1527,6 +1536,7 @@
 		/* Banner */
 
 			#banner {
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_840.jpg");
 				//padding: 6em 2em;
 			}
 
@@ -1731,6 +1741,7 @@
 
 			#banner {
 				padding: 4em 0;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_736.jpg");
 
 				h2 {
 					font-size: 2.25em;
@@ -1894,6 +1905,7 @@
 
 			#banner {
 				padding: 5em 1em 4em 1em;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.18) 76%, rgba(0,0,0,0.12) 100%), url("../../images/banner_480.jpg");
 			}
 
 		/* Main */
