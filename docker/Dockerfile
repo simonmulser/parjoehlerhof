@@ -1,7 +1,7 @@
-FROM nginx:1.11.10
+FROM nginx:stable
 
-EXPOSE 80
-
-ENV VIRTUAL_HOST="parjoehlerhof.simonmulser.com"
-ENV LETSENCRYPT_HOST="parjoehlerhof.simonmulser.com"
+ENV VIRTUAL_HOST="parjoehlerhof.it,www.parjoehlerhof.it"
+ENV LETSENCRYPT_HOST="parjoehlerhof.it,www.parjoehlerhof.it"
 ENV LETSENCRYPT_EMAIL="simonmulser@gmail.com"
+
+COPY nginx.conf /etc/nginx/nginx.conf
