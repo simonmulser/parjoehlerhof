@@ -21,6 +21,7 @@ var paths = {
     defaultskin: './assets/default-skin',
     js: './assets/js',
     fonts: './assets/fonts',
+    favicon: './assets/favicon',
     images: './images',
     dist: './dist',
     languages : './languages'
@@ -96,6 +97,11 @@ gulp.task('images', task.images = function(){
     .pipe(gulp.dest(path.join(paths.dist, 'images')));
 })
 
+gulp.task('favicon', task.favicon = function(){
+    return gulp.src(path.join(paths.favicon, '**/*'))
+    .pipe(gulp.dest(paths.dist));
+})
+
 gulp.task('js', function (cb) {
   pump([
       gulp.src(path.join(paths.js, '**/*.js')),
@@ -123,7 +129,7 @@ gulp.task('clean', task.clean = function(){
 
 gulp.task('pages', task.pages = gulp.series('html', 'deletelanguagemenuitem'));
 
-gulp.task('default', task.default = gulp.series('pages', 'css', 'images', 'js', 'htc', 'fonts', 'revReplace'));
+gulp.task('default', task.default = gulp.series('pages', 'css', 'images', 'favicon', 'js', 'htc', 'fonts', 'revReplace'));
 
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
