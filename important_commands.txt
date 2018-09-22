@@ -1,8 +1,0 @@
-rsync --delete -r --verbose -e='docker-machine ssh dockerdo' dist/ :www/parjoehlerhof
-
-docker build -t parjoehlerhof docker/.
-
-docker run -d -v /root/www/parjoehlerhof:/usr/share/nginx/html \
-               --network=webproxy \
-               --name parjoehlerhof \
-               parjoehlerhof
