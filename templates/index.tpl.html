@@ -1,74 +1,73 @@
 <!DOCTYPE HTML>
 <html lang="${{ general.lang }}$">
-	<head>
-		<title>Parjöhlerhof - ${{ index.title }}$</title>
-		<meta name="Description" content="${{ index.meta_description}}$">
 
-		@@include('_import_head.html')
+<head>
+    <title>Parjöhlerhof - ${{ index.title }}$</title>
+    <meta name="Description" content="${{ index.meta_description}}$"> @@include('_import_head.html')
 
-	</head>
-	<body class="landing">
-		<div id="page-wrapper">
+</head>
 
-			<!-- Header -->
-				@@include('_header.html')
+<body class="landing">
+    <div id="page-wrapper">
 
-			<!-- Banner -->
-				<section id="banner" class="big">
-				    <h2>${{ index.banner }}$</h2>
-				    <p>${{ index.subheading }}$</p>
-				</section>
+        <!-- Header -->
+        @@include('_header.html')
+
+        <!-- Banner -->
+        <section id="banner" class="big">
+            <h2>${{ index.banner }}$</h2>
+            <p>${{ index.subheading }}$</p>
+        </section>
 
 
-			<!-- Main -->
-				<section id="main" class="container">
+        <!-- Main -->
+        <section id="main" class="container">
 
-					<section class="box">
-						<h2>${{ index.heading2 }}$</h2>
-						<p>${{ index.text_1 }}$</p>
+            <section class="box">
+                <h2>${{ index.heading2 }}$</h2>
+                <p>${{ index.text_1 }}$</p>
 
-						<span class="image featured"><img
-														srcset="
-															../images/farm_320.jpg 320w,
-															../images/farm_375.jpg 375w,
-															../images/farm_425.jpg 425w,
-															../images/farm_690.jpg 690w,
-															../images/farm_730.jpg 730w,
-															../images/farm_870.jpg 870w,
-															../images/farm_1070.jpg 1070w,
-															../images/farm_2140.jpg 2140w,"
-														sizes="
-															(min-width: 980px) 50em,
-															(min-width: 736px) calc(0.9 * 100vw),
-															(min-width: 480) calc(100vw - 4em),
-															100vw"
-														src="../images/farm_1070.jpg" alt="" /></span>
-						<span class="image featured"><img
-														srcset="
-															../images/alp_4_320.jpg 320w,
-															../images/alp_4_375.jpg 375w,
-															../images/alp_4_425.jpg 425w,
-															../images/alp_4_690.jpg 690w,
-															../images/alp_4_730.jpg 730w,
-															../images/alp_4_870.jpg 870w,
-															../images/alp_4_1070.jpg 1070w,
-															../images/alp_4_1500.jpg 1500w,"
-														sizes="
-															(min-width: 980px) 50em,
-															(min-width: 736px) calc(0.9 * 100vw),
-															(min-width: 480) calc(100vw - 4em),
-															100vw"
-														src="../images/alp_4_1070.jpg" alt="" /></span>
-						<p>${{ index.text_2 }}$</p>
-					</section>
+                <span class="image featured">
+                    <img srcset="
+								    ../images/farm_320.jpg 320w,
+									../images/farm_375.jpg 375w,
+									../images/farm_425.jpg 425w,
+									../images/farm_690.jpg 690w,
+									../images/farm_730.jpg 730w,
+									../images/farm_870.jpg 870w,
+									../images/farm_1070.jpg 1070w,
+                                    ../images/farm_2140.jpg 2140w," sizes="
+									(min-width: 980px) 50em,
+									(min-width: 736px) calc(0.9 * 100vw),
+									(min-width: 480) calc(100vw - 4em),
+                                    100vw" src="../images/farm_1070.jpg" alt="" />
+                </span>
+                <span class="image featured">
+                    <img srcset="
+									../images/alp_4_320.jpg 320w,
+									../images/alp_4_375.jpg 375w,
+									../images/alp_4_425.jpg 425w,
+									../images/alp_4_690.jpg 690w,
+									../images/alp_4_730.jpg 730w,
+									../images/alp_4_870.jpg 870w,
+									../images/alp_4_1070.jpg 1070w,
+                                    ../images/alp_4_1500.jpg 1500w," sizes="
+								    (min-width: 980px) 50em,
+								    (min-width: 736px) calc(0.9 * 100vw),
+								    (min-width: 480) calc(100vw - 4em),
+                                    100vw" src="../images/alp_4_1070.jpg" alt="" />
+                </span>
+                <p>${{ index.text_2 }}$</p>
+            </section>
 
-				</section>
+        </section>
 
-			@@include('_footer.html')
+        @@include('_footer.html')
 
-		</div>
+    </div>
 
-		@@include('_import_footer.html')
+    @@include('_import_footer.html')
 
-	</body>
+</body>
+
 </html>

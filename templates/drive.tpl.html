@@ -1,60 +1,63 @@
 <!DOCTYPE HTML>
 <html lang="${{ general.lang }}$">
-	<head>
-		<title>Parjöhlerhof - ${{ drive.title }}$ </title>
-		<meta name="Description" content="${{ drive.meta_description}}$">
 
-		@@include('_import_head.html')
+<head>
+    <title>Parjöhlerhof - ${{ drive.title }}$ </title>
+    <meta name="Description" content="${{ drive.meta_description}}$"> @@include('_import_head.html')
 
-	</head>
-	<body class="landing">
-		<div id="page-wrapper">
+</head>
 
-			<!-- Header -->
-				@@include('_header.html')
+<body class="landing">
+    <div id="page-wrapper">
 
-			<!-- Banner -->
-				<section id="banner">
-				    <h2>${{ drive.title }}$ </h2>
-				    <p>${{ drive.subheading }}$ </p>
-				</section>
+        <!-- Header -->
+        @@include('_header.html')
 
-			<!-- Main -->
-				<section id="main" class="container">
+        <!-- Banner -->
+        <section id="banner">
+            <h2>${{ drive.title }}$ </h2>
+            <p>${{ drive.subheading }}$ </p>
+        </section>
 
-					<section class="box">
-						<div class="row">
-							<div class="4u 12u(mobilep)">
-								<h3>${{ drive.address }}$</h3>
-									<p>
-									Fam. <br />
-									Fink Hubert <br />
-									Parjöhlerhof <br />
-									Oberland 25 <br />
-									I-39040 Villanders - Südtirol<br />
-									</p>
-							</div>
-							<div class="8u 12u(mobilep)">
-								<h3>${{ drive.description }}$</h3>
-									<p>${{ drive.description_text }}$</p>
-							</div>
-						</div>
-						<h3>${{ drive.map }}$</h3>
-						<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.6131782938846!2d11.514511315382334!3d46.63440366261928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477809625c0ee303%3A0x82b7ff182f8b8a6e!2sParj%C3%B6hlerhof!5e0!3m2!1sen!2sat!4v1490093957132" allowfullscreen></iframe>
-						<br />
-						<p>
-							${{ drive.latitude }}$: 46.6344037, ${{ drive.longitude }}$: 11.5145113
-						</p>
+        <!-- Main -->
+        <section id="main" class="container">
 
-					</section>
+            <section class="box">
+                <div class="row">
+                    <div class="4u 12u(mobilep)">
+                        <h3>${{ drive.address }}$</h3>
+                        <p>
+                            Fam.
+                            <br /> Fink Hubert
+                            <br /> Parjöhlerhof
+                            <br /> Oberland 25
+                            <br /> I-39040 Villanders - Südtirol
+                            <br />
+                        </p>
+                    </div>
+                    <div class="8u 12u(mobilep)">
+                        <h3>${{ drive.description }}$</h3>
+                        <p>${{ drive.description_text }}$</p>
+                    </div>
+                </div>
+                <h3>${{ drive.map }}$</h3>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.6131782938846!2d11.514511315382334!3d46.63440366261928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477809625c0ee303%3A0x82b7ff182f8b8a6e!2sParj%C3%B6hlerhof!5e0!3m2!1sen!2sat!4v1490093957132"
+                    allowfullscreen></iframe>
+                <br />
+                <p>
+                    ${{ drive.latitude }}$: 46.6344037, ${{ drive.longitude }}$: 11.5145113
+                </p>
 
-				</section>
+            </section>
 
-			@@include('_footer.html')
+        </section>
 
-		</div>
+        @@include('_footer.html')
 
-		@@include('_import_footer.html')
+    </div>
 
-	</body>
+    @@include('_import_footer.html')
+
+</body>
+
 </html>
