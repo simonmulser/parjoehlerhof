@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     deleteLines = require('gulp-delete-lines'),
     merge = require('merge-stream'),
-    path = require('path'),
+    joinPath = require('path.join'),
     filter = require('gulp-filter')
 rev = require('gulp-rev'),
     revReplace = require('gulp-rev-replace'),
@@ -31,7 +31,7 @@ var task = {};
 
 gulp.task('html', task.html = function () {
 
-    return gulp.src(path.join(paths.templates, '**/*.tpl.html'))
+    return gulp.src(joinPath(paths.templates, '**/*.tpl.html'))
         .pipe(fileinclude({ indent: true }))
         .pipe(rename({
             extname: ""
@@ -48,21 +48,21 @@ gulp.task('html', task.html = function () {
 });
 
 gulp.task('deletelanguagemenuitem', task.deletelanguagemenuitem = function () {
-    var german = gulp.src(path.join(paths.dist, 'de/**/*.html'))
+    var german = gulp.src(joinPath(paths.dist, 'de/**/*.html'))
         .pipe(deleteLines({
             'filters': [
                 />DEU<\/a><\/li>/i
             ]
         }))
-        .pipe(gulp.dest(path.join(paths.dist, 'de')));
+        .pipe(gulp.dest(joinPath(paths.dist, 'de')));
 
-    var italian = gulp.src(path.join(paths.dist, 'it/**/*.html'))
+    var italian = gulp.src(joinPath(paths.dist, 'it/**/*.html'))
         .pipe(deleteLines({
             'filters': [
                 />ITA<\/a><\/li>/i
             ]
         }))
-        .pipe(gulp.dest(path.join(paths.dist, 'it')));
+        .pipe(gulp.dest(joinPath(paths.dist, 'it')));
     return merge(german, italian);
 });
 
@@ -71,7 +71,7 @@ gulp.task('css', task.sass = function () {
     const cssFilter = filter('**/*.css', { restore: true });
     const scssFilter = filter('**/*.scss', { restore: true });
 
-    return gulp.src(path.join(paths.css, '**/*'))
+    return gulp.src(joinPath(paths.css, '**/*'))
         .pipe(scssFilter)
         .pipe(sass().on('error', sass.logError))
         .pipe(scssFilter.restore)
@@ -79,51 +79,51 @@ gulp.task('css', task.sass = function () {
         .pipe(cleanCSS())
         .pipe(rev())
         .pipe(cssFilter.restore)
-        .pipe(gulp.dest(path.join(paths.dist, '/assets/css')))
+        .pipe(gulp.dest(joinPath(paths.dist, '/assets/css')))
         .pipe(rev.manifest())
         .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task("revReplace", task.revReplace = function () {
-    var manifest = gulp.src(path.join(paths.dist, 'rev-manifest.json'));
+    var manifest = gulp.src(joinPath(paths.dist, 'rev-manifest.json'));
 
-    return gulp.src(path.join(paths.dist, '**/*.html'))
+    return gulp.src(joinPath(paths.dist, '**/*.html'))
         .pipe(revReplace({ manifest: manifest }))
         .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('images', task.images = function () {
-    return gulp.src(path.join(paths.images, '**/*'))
-        .pipe(gulp.dest(path.join(paths.dist, 'images')));
+    return gulp.src(joinPath(paths.images, '**/*'))
+        .pipe(gulp.dest(joinPath(paths.dist, 'images')));
 })
 
 gulp.task('favicon', task.favicon = function () {
-    return gulp.src(path.join(paths.favicon, '**/*'))
+    return gulp.src(joinPath(paths.favicon, '**/*'))
         .pipe(gulp.dest(paths.dist));
 })
 
 gulp.task('js', function (cb) {
     pump([
-        gulp.src(path.join(paths.js, '**/*.js')),
+        gulp.src(joinPath(paths.js, '**/*.js')),
         uglify(),
-        gulp.dest(path.join(paths.dist, paths.js))
+        gulp.dest(joinPath(paths.dist, paths.js))
     ],
         cb
     );
 });
 
 gulp.task('htc', task.htc = function () {
-    return gulp.src(path.join(paths.js, '**/*.htc'))
-        .pipe(gulp.dest(path.join(paths.dist, paths.js)));
+    return gulp.src(joinPath(paths.js, '**/*.htc'))
+        .pipe(gulp.dest(joinPath(paths.dist, paths.js)));
 })
 
 gulp.task('fonts', task.fonts = function () {
-    return gulp.src(path.join(paths.fonts, '**/*'))
-        .pipe(gulp.dest(path.join(paths.dist, paths.fonts)));
+    return gulp.src(joinPath(paths.fonts, '**/*'))
+        .pipe(gulp.dest(joinPath(paths.dist, paths.fonts)));
 });
 
 gulp.task('clean', task.clean = function () {
-    return gulp.src(path.join(paths.dist, '*'))
+    return gulp.src(joinPath(paths.dist, '*'))
         .pipe(clean());
 });
 
@@ -134,7 +134,7 @@ gulp.task('default', task.default = gulp.series('pages', 'css', 'images', 'favic
 gulp.task('build', task.build = gulp.series(task.clean, task.default));
 
 gulp.task("watch", function () {
-    gulp.watch(path.join(paths.templates, '**/*.html'), gulp.series('pages'));
-    gulp.watch(path.join(paths.sass, '**/*.scss'), gulp.series('css'));
-    gulp.watch(path.join(paths.languages, '**/*.yaml'), gulp.series('deletelanguagemenuitem'));
+    gulp.watch(joinPath(paths.templates, '**/*.html'), gulp.series('pages'));
+    gulp.watch(joinPath(paths.sass, '**/*.scss'), gulp.series('css'));
+    gulp.watch(joinPath(paths.languages, '**/*.yaml'), gulp.series('deletelanguagemenuitem'));
 })
