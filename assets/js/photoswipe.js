@@ -63,41 +63,34 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
         var eTarget = e.target || e.srcElement;
 
         // find root element of slide
-        var clickedListItem = closest(eTarget, function (el) {
+        var clickedGalleryItem = closest(eTarget, function (el) {
             return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
         });
 
-        if (!clickedListItem) {
+        if (!clickedGalleryItem) {
             return;
         }
 
-        // find index of clicked item by looping through all child nodes
-        // alternatively, you may define index via data- attribute
-        var clickedGallery = clickedListItem.parentNode,
-            childNodes = clickedListItem.parentNode.childNodes,
-            numChildNodes = childNodes.length,
-            nodeIndex = 0,
-            index;
-
-        for (var i = 0; i < numChildNodes; i++) {
-            if (childNodes[i].nodeType !== 1) {
-                continue;
-            }
-
-            if (childNodes[i] === clickedListItem) {
-                index = nodeIndex;
-                break;
-            }
-            nodeIndex++;
+        if (!clickedGalleryItem.getAttribute("gallery-index")) {
+            return;
         }
 
+        var index = parseInt(clickedGalleryItem.getAttribute("gallery-index"));
 
+        // find gallery
+        var clickedGallery = closest(eTarget, function (el) {
+            return (el.tagName && el.id.startsWith('gallery'));
+        });
+
+        if (!clickedGallery) {
+            return;
+        }
 
         if (index >= 0) {
             // open PhotoSwipe if valid index found
             openPhotoSwipe(index, clickedGallery);
         }
-        return false;
+        return;
     };
 
     // parse picture index and gallery index from URL (#&pid=1&gid=2)

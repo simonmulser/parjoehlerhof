@@ -137,4 +137,5 @@ gulp.task("watch", function () {
     gulp.watch(joinPath(paths.templates, '**/*.html'), gulp.series('pages'));
     gulp.watch(joinPath(paths.sass, '**/*.scss'), gulp.series('css'));
     gulp.watch(joinPath(paths.languages, '**/*.yaml'), gulp.series('deletelanguagemenuitem'));
+    gulp.watch(joinPath(paths.js, '**/*.js'), gulp.series('js'));
 })
