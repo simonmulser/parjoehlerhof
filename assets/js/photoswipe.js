@@ -1,5 +1,398 @@
 var initPhotoSwipeFromDOM = function (gallerySelector) {
 
+    var galleries = {
+        galleryPanorama: [
+            {
+                superTiny: {
+                    src: '../images/appartments/panorama/living_4_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/panorama/living_4_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/panorama/living_4_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/panorama/living_4_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/panorama/living_4_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/panorama/living_4_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/panorama/bed_2_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/panorama/bed_2_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/panorama/bed_2_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/panorama/bed_2_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/panorama/bed_2_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/panorama/bed_2_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/panorama/bath_1_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/panorama/bath_1_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/panorama/bath_1_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/panorama/bath_1_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/panorama/bath_1_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/panorama/bath_1_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/panorama/bath_2_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/panorama/bath_2_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/panorama/bath_2_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/panorama/bath_2_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/panorama/bath_2_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/panorama/bath_2_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+        ],
+        galleryBergblick: [
+            {
+                superTiny: {
+                    src: '../images/appartments/bergblick/living_1_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/bergblick/living_1_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/bergblick/living_1_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/bergblick/living_1_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/bergblick/living_1_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/bergblick/living_1_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/bergblick/living_2_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/bergblick/living_2_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/bergblick/living_2_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/bergblick/living_2_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/bergblick/living_2_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/bergblick/living_2_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/bergblick/bed_1_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/bergblick/bed_1_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/bergblick/bed_1_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/bergblick/bed_1_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/bergblick/bed_1_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/bergblick/bed_1_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/bergblick/bath_2_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/bergblick/bath_2_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/bergblick/bath_2_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/bergblick/bath_2_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/bergblick/bath_2_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/bergblick/bath_2_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+        ],
+        galleryWaldruhe: [
+            {
+                superTiny: {
+                    src: '../images/appartments/waldruhe/living_3_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/waldruhe/living_3_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/waldruhe/living_3_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/waldruhe/living_3_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/waldruhe/living_3_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/waldruhe/living_3_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/waldruhe/bed_1_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/waldruhe/bed_1_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/waldruhe/bed_1_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/waldruhe/bed_1_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/waldruhe/bed_1_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/waldruhe/bed_1_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/waldruhe/bed_4_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/waldruhe/bed_4_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/waldruhe/bed_4_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/waldruhe/bed_4_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/waldruhe/bed_4_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/waldruhe/bed_4_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+            {
+                superTiny: {
+                    src: '../images/appartments/waldruhe/bath_1_480.jpg',
+                    w: '480',
+                    h: '320'
+                },
+                tiny: {
+                    src: '../images/appartments/waldruhe/bath_1_736.jpg',
+                    w: '736',
+                    h: '491'
+                },
+                small: {
+                    src: '../images/appartments/waldruhe/bath_1_840.jpg',
+                    w: '840',
+                    h: '560'
+                },
+                medium: {
+                    src: '../images/appartments/waldruhe/bath_1_980.jpg',
+                    w: '980',
+                    h: '653'
+                },
+                large: {
+                    src: '../images/appartments/waldruhe/bath_1_1280.jpg',
+                    w: '1280',
+                    h: '853'
+                },
+                superLarge: {
+                    src: '../images/appartments/waldruhe/bath_1_1500.jpg',
+                    w: '1500',
+                    h: '1000'
+                },
+            },
+        ]
+    }
+
     // parse slide data (url, title, size ...) from DOM elements
     // (children of gallerySelector)
     var parseThumbnailElements = function (el) {
@@ -127,23 +520,12 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
             options,
             items;
 
-        items = parseThumbnailElements(galleryElement);
+        items = galleries[galleryElement.id];
 
         // define options (if needed)
         options = {
-
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-            getThumbBoundsFn: function (index) {
-                // See Options -> getThumbBoundsFn section of documentation for more info
-                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = thumbnail.getBoundingClientRect();
-
-                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-            }
-
         };
 
         // PhotoSwipe opened from URL
@@ -176,6 +558,99 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
         // Pass data to PhotoSwipe and initialize it
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+
+        // create variable that will store real size of viewport
+        var realViewportWidth,
+            currentImageSize = 'none',
+            firstResize = true,
+            imageSrcWillChange;
+
+        // beforeResize event fires each time size of gallery viewport updates
+        gallery.listen('beforeResize', function () {
+            // gallery.viewportSize.x - width of PhotoSwipe viewport
+            // gallery.viewportSize.y - height of PhotoSwipe viewport
+            // window.devicePixelRatio - ratio between physical pixels and device independent pixels (Number)
+            //                          1 (regular display), 2 (@2x, retina) ...
+
+
+            // calculate real pixels when size changes
+            realViewportWidth = gallery.viewportSize.x * window.devicePixelRatio;
+            // Code below is needed if you want image to switch dynamically on window.resize
+
+            // Find out if current images need to be changed
+            if (currentImageSize !== 'superTiny' && realViewportWidth < 480) {
+                currentImageSize = 'superTiny';
+                imageSrcWillChange = true;
+            } else if (currentImageSize !== 'tiny' && realViewportWidth < 736) {
+                currentImageSize = 'tiny';
+                imageSrcWillChange = true;
+            } else if (currentImageSize !== 'small' && realViewportWidth < 840) {
+                currentImageSize = 'small';
+                imageSrcWillChange = true;
+            } else if (currentImageSize !== 'medium' && realViewportWidth < 980) {
+                currentImageSize = 'medium';
+                imageSrcWillChange = true;
+            } else if (currentImageSize !== 'large' && realViewportWidth < 1280) {
+                currentImageSize = 'large';
+                imageSrcWillChange = true;
+            } else if (currentImageSize !== 'superLarge' && realViewportWidth >= 1500) {
+                currentImageSize = 'superLarge';
+                imageSrcWillChange = true;
+            }
+
+            // Invalidate items only when source is changed and when it's not the first update
+            if (imageSrcWillChange && !firstResize) {
+                // invalidateCurrItems sets a flag on slides that are in DOM,
+                // which will force update of content (image) on window.resize.
+                gallery.invalidateCurrItems();
+            }
+
+            if (firstResize) {
+                firstResize = false;
+            }
+
+            imageSrcWillChange = false;
+
+        });
+
+
+        // gettingData event fires each time PhotoSwipe retrieves image source & size
+        gallery.listen('gettingData', function (index, item) {
+
+            // Set image source & size based on real viewport width
+            if (currentImageSize === 'superTiny') {
+                item.src = item.superTiny.src;
+                item.w = item.superTiny.w;
+                item.h = item.superTiny.h;
+            } else if (currentImageSize === 'tiny') {
+                item.src = item.tiny.src;
+                item.w = item.tiny.w;
+                item.h = item.tiny.h;
+            } else if (currentImageSize === 'small') {
+                item.src = item.small.src;
+                item.w = item.small.w;
+                item.h = item.small.h;
+            } else if (currentImageSize === 'medium') {
+                item.src = item.medium.src;
+                item.w = item.medium.w;
+                item.h = item.medium.h;
+            } else if (currentImageSize === 'large') {
+                item.src = item.large.src;
+                item.w = item.large.w;
+                item.h = item.large.h;
+            } else {
+                item.src = item.superLarge.src;
+                item.w = item.superLarge.w;
+                item.h = item.superLarge.h;
+            }
+
+            // It doesn't really matter what will you do here, 
+            // as long as item.src, item.w and item.h have valid values.
+            // 
+            // Just avoid http requests in this listener, as it fires quite often
+
+        });
+
         gallery.init();
     };
 
