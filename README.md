@@ -6,10 +6,13 @@
 ## How to deploy a new docker image
 
 1) Run `docker build -t parjoehlerhof docker/.`
-2) Run: 
-```
-docker run -d -v /root/www/parjoehlerhof:/usr/share/nginx/html \
-               --network=webproxy \
-               --name parjoehlerhof \
-               parjoehlerhof
-```
+2) Run: `docker run -d -v /root/www/parjoehlerhof:/usr/share/nginx/html --network=webproxy --name parjoehlerhof parjoehlerhof`
+
+## How to add docker host
+
+1) Run:
+`docker-machine create --driver=generic --generic-ip-address=IP_ADDRESS --generic-ssh-user=USERNAME --generic-ssh-key=PATH_TO_SSH_KEY --generic-ssh-port=PORT MACHINE_NAME`
+
+## How to create nginx proxy with letsencrypt
+
+1) See https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
