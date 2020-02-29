@@ -25,7 +25,7 @@ var paths = {
   images: "./images",
   dist: "./dist",
   languages: "./languages",
-  redirect: "_redirects"
+  redirects: "_redirects"
 };
 
 var task = {};
@@ -162,6 +162,13 @@ gulp.task(
 );
 
 gulp.task(
+  "redirects",
+  (task.redirects = function() {
+    return gulp.src(paths.redirects).pipe(gulp.dest(paths.dist));
+  })
+);
+
+gulp.task(
   "clean",
   (task.clean = function() {
     return gulp.src(joinPath(paths.dist, "*")).pipe(clean());
@@ -183,7 +190,8 @@ gulp.task(
     "js",
     "htc",
     "fonts",
-    "revReplace"
+    "revReplace",
+    "redirects"
   ))
 );
 
