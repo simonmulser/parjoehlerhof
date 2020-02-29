@@ -1,0 +1,3 @@
+# Redirect users with Italian language to /it all others to /de
+/  /it  302  Language=it
+/  /de  302
