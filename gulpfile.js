@@ -1,7 +1,8 @@
+const sass = require('gulp-sass')(require('sass'));
+
 var gulp = require("gulp"),
   fileinclude = require("gulp-file-include"),
   rename = require("gulp-rename"),
-  sass = require("gulp-sass"),
   i18n = require("gulp-html-i18n"),
   clean = require("gulp-clean"),
   deleteLines = require("gulp-delete-lines"),
